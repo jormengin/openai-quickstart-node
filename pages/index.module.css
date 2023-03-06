@@ -14,7 +14,7 @@
   font-style: normal;
 }
 .main,
-.main input {
+.main input,.main select {
   font-size: 16px;
   line-height: 24px;
   color: #353740;
@@ -41,7 +41,7 @@
   flex-direction: column;
   width: 320px;
 }
-.main input[type="text"] {
+.main input[type="text"],.main select[type="text"] {
   padding: 12px 16px;
   border: 1px solid #10a37f;
   border-radius: 4px;
@@ -52,7 +52,7 @@
   color: #8e8ea0;
   opacity: 1;
 }
-.main input[type="submit"] {
+.main input[type="submit"],.main select[type="submit"]  {
   padding: 12px 0;
   color: #fff;
   background-color: #10a37f;
@@ -64,4 +64,28 @@
 .main .result {
   font-weight: bold;
   margin-top: 40px;
+  max-width: clamp(400px,90vw,100px);
+  padding:20px
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.refresh{
+  margin-top: 20px !important;
+  padding: 12px 16px;
+  border: 1px solid #10a37f;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  outline-color: #10a37f;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
